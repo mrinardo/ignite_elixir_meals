@@ -1,5 +1,9 @@
 # Meals
 
+This Phoenix REST API application exposes CRUD methods to manage the meals of the day. Data is stored in a Postgres database.
+
+This is [challenge #1](https://www.notion.so/Desafio-01-CRUD-Refei-es-di-rias-d2911dcc69ee444faea70eec7796546c) of Rocketseat's Ignite Elixir module 4.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
@@ -10,7 +14,16 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-## Learn more
+## Tests
+
+You can also run the tests script in the terminal (outside `iex`):
+
+```shell
+$ mix test
+$ mix test --cover
+```
+
+## Learn more about Phoenix
 
   * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html

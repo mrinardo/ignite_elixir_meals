@@ -1,12 +1,17 @@
 defmodule MealsWeb.Router do
   use MealsWeb, :router
 
+  alias MealsWeb.Plugs.UUIDChecker
+
   pipeline :api do
     plug :accepts, ["json"]
+    plug UUIDChecker
   end
 
   scope "/api", MealsWeb do
     pipe_through :api
+
+    resources "/meals", MealsController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development

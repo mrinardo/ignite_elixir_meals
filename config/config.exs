@@ -10,6 +10,10 @@ use Mix.Config
 config :meals,
   ecto_repos: [Meals.Repo]
 
+config :meals, Meals.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures the endpoint
 config :meals, MealsWeb.Endpoint,
   url: [host: "localhost"],
